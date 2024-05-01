@@ -24,4 +24,23 @@ void main() {
   }
   print('Öğrencinin Puanı: $classDegree');
   print('Öğrencinin Durumu: $isSuccess');
+
+  print("--------------------");
+  //Mağazaya gelen belirli kişiler hoşgeldin şeklinde karşılansın.
+
+  const String specialUserName = 'Adam';
+  const String name1 = 'Rico';
+  const String name2 = 'Jennie';
+
+  switch (specialUserName) {
+    case 'Adam':
+      print('Welcome!');
+      break;
+    case name1:
+    case name2:
+      print("What are you doing here!!");
+      break;
+    default:
+      print('İnvalid name!');
+  }
 }
