@@ -7,6 +7,14 @@
 */
 
 void main() {
+  exp1();
+  exp2();
+  exp3();
+  exp4();
+  exp5();
+}
+
+void exp1() {
   print('***********EXP 1***********');
   final List<int> expList1 = [2, 8, 5, 0, 99];
   int max = expList1[0];
@@ -16,7 +24,9 @@ void main() {
     }
   }
   print('Dizinin en büyük sayısı: $max');
+}
 
+void exp2() {
   print('***********EXP 2***********');
   final List<int> expList2 = [1, 5, 0, 99];
   var expSum2 = 0;
@@ -28,7 +38,9 @@ void main() {
   //   expSum2 += i;
   // }
   print('Sayıların toplamı = $expSum2');
+}
 
+void exp3() {
   print('***********EXP 3***********');
   final List<int> expList3 = [1, 20, 53, 99];
   var ciftSayi = 0;
@@ -42,7 +54,9 @@ void main() {
   }
   print('Çift sayı miktarı: $ciftSayi');
   print('Tek sayı miktarı: $tekSayi');
+}
 
+void exp4() {
   print('***********EXP 4***********');
   final List<int> expList4 = [1, 5, 0, 99];
   var sayiAdeti = 0;
@@ -55,7 +69,9 @@ void main() {
   }
   int ortalama = expSum4 ~/ sayiAdeti;
   print('Ortalama: $ortalama');
+}
 
+void exp5() {
   print('***********EXP 5***********');
   Map<String, int> market = {
     'bread': 10,
