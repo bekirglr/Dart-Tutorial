@@ -28,4 +28,18 @@ void main() {
   //   expSum2 += i;
   // }
   print(expSum2);
+
+  print('***********EXP 3***********');
+  final List<int> expList3 = [1, 20, 53, 99];
+  var ciftSayi = 0;
+  var tekSayi = 0;
+  for (var i in expList3) {
+    if (i % 2 == 0) {
+      ciftSayi++;
+    } else {
+      tekSayi++;
+    }
+  }
+  print(ciftSayi);
+  print(tekSayi);
 }
