@@ -2,7 +2,7 @@
 1. Bir dizideki en büyük sayıyı bulan bir algoritma yazın.
 2. Bir dizideki sayıların toplamını bulan bir algoritma yazın.
 3. Bir dizideki tek sayıların ve çift sayıların sayısını bulan bir algoritma yazın.
-4. Bir dizideki elemanları tersine çeviren bir algoritma yazın.
+4. Bir dizideki elemanların ortalamasını bulan bir algoritma yazın.
 5. İki sıralı dizideki tekrar eden elemanları bulan bir algoritma yazın.
 */
 
@@ -27,7 +27,7 @@ void main() {
   // for (var i in expList2) {
   //   expSum2 += i;
   // }
-  print(expSum2);
+  print('Sayıların toplamı = $expSum2');
 
   print('***********EXP 3***********');
   final List<int> expList3 = [1, 20, 53, 99];
@@ -40,6 +40,19 @@ void main() {
       tekSayi++;
     }
   }
-  print(ciftSayi);
-  print(tekSayi);
+  print('Çift sayı miktarı: $ciftSayi');
+  print('Tek sayı miktarı: $tekSayi');
+
+  print('***********EXP 4***********');
+  final List<int> expList4 = [1, 5, 0, 99];
+  var sayiAdeti = 0;
+  for (var i in expList4) {
+    sayiAdeti++;
+  }
+  var expSum4 = 0;
+  for (var i in expList4) {
+    expSum4 += i;
+  }
+  int ortalama = expSum4 ~/ sayiAdeti;
+  print('Ortalama: $ortalama');
 }
