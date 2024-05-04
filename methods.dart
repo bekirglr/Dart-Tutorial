@@ -6,6 +6,7 @@ void main() {
   checkUserMoney(200, 50);
   print('*********************');
   checkPrimeNumber(5);
+  checkPrimeNumber(9);
 }
 
 void checkUserMoney(int money, int minimumValue) {
@@ -17,7 +18,6 @@ void checkUserMoney(int money, int minimumValue) {
 }
 
 //Check prime-number
-
 void checkPrimeNumber(int number) {
   bool isPrime = true;
   for (int j = 2; j <= number / 2; j++) {
