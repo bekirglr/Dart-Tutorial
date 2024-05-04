@@ -3,7 +3,7 @@
 2. Bir dizideki sayıların toplamını bulan bir algoritma yazın.
 3. Bir dizideki tek sayıların ve çift sayıların sayısını bulan bir algoritma yazın.
 4. Bir dizideki elemanların ortalamasını bulan bir algoritma yazın.
-5. İki sıralı dizideki tekrar eden elemanları bulan bir algoritma yazın.
+5. Rico'nun bir miktar parası olsun ve market'e gitsin neler alabilir?
 */
 
 void main() {
@@ -55,4 +55,18 @@ void main() {
   }
   int ortalama = expSum4 ~/ sayiAdeti;
   print('Ortalama: $ortalama');
+
+  print('***********EXP 5***********');
+  Map<String, int> market = {
+    'bread': 10,
+    'milk': 20,
+    'oil': 40,
+    'chocolate': 5,
+  };
+  int ricoMoney = 30;
+  for (var product in market.keys) {
+    if (ricoMoney > market[product]!) {
+      print('$product: ${market[product]}£');
+    }
+  }
 }
