@@ -41,3 +41,15 @@ class Users {
   // bool isEmptyId() => _id.isEmpty;
   bool get isEmptyId => _id.isEmpty;
 }
+
+class UserBank {
+  late final String name;
+  int _userBankMoney;
+
+  int get userBankMoney => _userBankMoney;
+  set userBankMoney(int? userBankMoney) {
+    _userBankMoney = userBankMoney == null ? 0 : userBankMoney; //short if
+  }
+
+  UserBank(this.name, this._userBankMoney) {}
+}

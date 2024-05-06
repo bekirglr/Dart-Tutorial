@@ -9,7 +9,7 @@ void main() {
       print("No money!");
     }
     //conditional expression
-    bool result = controlMoney(element) == null ? false : true;
+    bool result = controlMoney(element) == null ? false : true; //short if
     print(result);
   }
 
@@ -29,6 +29,12 @@ void main() {
   } else if (newUser2.isEmptyId) {
     print("ID is Not Found!");
   }
+
+  print('*' * 10);
+  UserBank newUserBank = UserBank("Cedric", 200);
+  newUserBank.userBankMoney += 5;
+  newUserBank.userBankMoney = null;
+  print(newUserBank.userBankMoney);
 }
 
 int? controlMoney(int? money) {
