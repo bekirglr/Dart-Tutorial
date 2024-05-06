@@ -1,6 +1,7 @@
 void main() {
   int userMoney = 100;
   final customerBuy = Product.oil;
+
   switch (customerBuy) {
     case Product.bread:
       userMoney -= 5;
