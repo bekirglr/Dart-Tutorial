@@ -60,6 +60,7 @@ void exp4() {
   print('***********EXP 4***********');
   final List<int> expList4 = [1, 5, 0, 99];
   var sayiAdeti = 0;
+  // ignore: unused_local_variable
   for (var i in expList4) {
     sayiAdeti++;
   }
