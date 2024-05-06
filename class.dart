@@ -6,6 +6,18 @@ void main() {
     } else {
       print("No money!");
     }
+
+    //conditional expression
+    bool result = controlMoney(element) == null ? false : true;
+    print(result);
+  }
+}
+
+int? controlMoney(int? money) {
+  if (money == null && money == 0) {
+    return money;
+  } else {
+    return null;
   }
 }
 
