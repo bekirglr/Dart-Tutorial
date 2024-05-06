@@ -2,6 +2,9 @@ void main() {
   int userMoney = 100;
   final customerBuy = Product.oil;
 
+  if (customerBuy == Product.oil) {}
+  if (customerBuy.name == 'oil') {}
+
   switch (customerBuy) {
     case Product.bread:
       userMoney -= 5;
@@ -16,6 +19,10 @@ void main() {
       userMoney -= 5;
       print(userMoney);
   }
+
+  if (customerBuy.isCheckName('oil')) {
+    print("Buy oil");
+  }
 }
 
 enum Product {
@@ -23,4 +30,10 @@ enum Product {
   oil,
   milk,
   water,
+}
+
+extension OilSelectedExtension on Product {
+  bool isCheckName(String name) {
+    return this.name == name;
+  }
 }
