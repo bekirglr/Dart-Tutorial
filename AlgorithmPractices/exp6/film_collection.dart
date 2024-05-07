@@ -20,11 +20,11 @@ class HorrorCinema extends ICinemaCategory {
 }
 
 class ActionCinema extends ICinemaCategory {
-  ActionCinema(String name, String director, int ticketPrice)
+  ActionCinema(String name, String director, int? ticketPrice)
       : super(name, director, ticketPrice);
 }
 
 class RomanticCinema extends ICinemaCategory {
-  RomanticCinema(String name, String director, int ticketPrice)
+  RomanticCinema(String name, String director, int? ticketPrice)
       : super(name, director, ticketPrice);
 }
