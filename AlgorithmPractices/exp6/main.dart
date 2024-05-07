@@ -1,3 +1,6 @@
 //Bir sinema olsun
-//Sinemanın türleri, senaristleri, bilet fiyatları olsun
-//Komedi sinemalarında %50 indirim olsun
+//Cinema name'i, directory, ticket prices'ı olsun
+//Comedy sinemalarında %50 discount olsun
+//Horror cinema'sı bedava olsun
+
+void main() {}
