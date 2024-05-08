@@ -6,6 +6,7 @@
 import 'film_collection.dart';
 
 void main() {
+  var line = "-" * 10;
   var film1 = ComedyFilm("Charlie Chaplin", "Rico", 50);
   var film2 = RomanticFilm("Love", "Jennie", 100, 20);
   var film3 = HorrorFilm("The Dark Night", "Cedric", 120);
@@ -14,10 +15,10 @@ void main() {
   var user = User("John Doe");
   user.selectFilm(film1);
   user.printSelectedFilmInfo();
-  print("-" * 10);
+  print(line);
   user.selectFilm(film2);
   user.printSelectedFilmInfo();
-  print("-" * 10);
+  print(line);
   user.selectFilm(film3);
   // Seçilen film hakkında bilgileri yazdır
   user.printSelectedFilmInfo();
