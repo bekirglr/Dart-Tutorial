@@ -1,30 +1,28 @@
-class FilmCategory {}
-
-abstract class ICinemaCategory {
+abstract class IFilmCategory {
   final String name;
   final String director;
-  final int? ticketPrice;
+  final int price;
 
-  ICinemaCategory(this.name, this.director, this.ticketPrice);
+  IFilmCategory(this.name, this.director, this.price);
 }
 
-class ComedyCinema extends ICinemaCategory {
-  final double discount;
+class RomanticFilm extends IFilmCategory {
+  late final int _discount;
 
-  ComedyCinema(String name, String director, int? ticketPrice, this.discount)
-      : super(name, director, null);
+  RomanticFilm(String name, String director, int price, int discount)
+      : super(name, director, price) {
+    _discount = discount;
+  }
+
+  int get CalculateMoney => price - _discount;
 }
 
-class HorrorCinema extends ICinemaCategory {
-  HorrorCinema(String name, String director) : super(name, director, null);
+class ComedyFilm extends IFilmCategory {
+  ComedyFilm(String name, String director, int price)
+      : super(name, director, price);
 }
 
-class ActionCinema extends ICinemaCategory {
-  ActionCinema(String name, String director, int? ticketPrice)
-      : super(name, director, ticketPrice);
-}
-
-class RomanticCinema extends ICinemaCategory {
-  RomanticCinema(String name, String director, int? ticketPrice)
-      : super(name, director, ticketPrice);
+class HorrorFilm extends IFilmCategory {
+  HorrorFilm(String name, String director, int price)
+      : super(name, director, price);
 }
