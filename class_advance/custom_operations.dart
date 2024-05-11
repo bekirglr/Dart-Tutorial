@@ -18,13 +18,27 @@ void main() {
   Diğer bankanın herhangi bir constructor'u yoksa, sadece işini yapıp geri döndürüyor ise
   "mixin" kullanmak mantıklı olur. 
   */
+
+  //account1'e para ekle ve ID'sini bir arttır ve adını değiştir. Birden fazla işlem ard arda!
+  account1.money += 10;
+  account1
+    ..money += 10
+    ..id = "3"
+    ..updateName('Cedric');
+  //..name = ;
+  print(account1);
 }
 
 class Bank with BankMixin {
-  final int money;
-  final String id;
+  int money;
+  String id;
+  String? name;
 
   Bank(this.money, this.id);
+
+  void updateName(String name) {
+    this.name = name;
+  }
 
   int operator +(Bank newBank) {
     return (this.money + newBank.money);
