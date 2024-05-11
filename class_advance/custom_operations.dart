@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   //iki hesaptaki paraların toplamını göster
   final String line = "*" * 10;
