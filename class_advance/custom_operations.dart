@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 void main() {
   //iki hesaptaki paraların toplamını göster
   final String line = "*" * 10;
@@ -9,9 +11,16 @@ void main() {
 
   //id'si aynı olan hesaplar aynı hesaptır.
   print(account1 == account2);
+  print(line);
+
+  //Diğer bankadan bir modül alındı. Bunu ekle ve müşterinin parasını sorgula
+  /*
+  Diğer bankanın herhangi bir constructor'u yoksa, sadece işini yapıp geri döndürüyor ise
+  "mixin" kullanmak mantıklı olur. 
+  */
 }
 
-class Bank {
+class Bank with BankMixin {
   final int money;
   final String id;
 
@@ -38,4 +47,18 @@ class Bank {
 
   @override
   int get hashCode => money.hashCode ^ id.hashCode;
+
+  @override
+  void sayBankName() {
+    // TODO: implement sayBankName
+    calculateMoney(money);
+  }
+}
+
+mixin BankMixin {
+  void sayBankName();
+
+  void calculateMoney(int money) {
+    print(money);
+  }
 }
