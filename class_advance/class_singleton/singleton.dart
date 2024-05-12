@@ -37,6 +37,7 @@ void main() {
   //ProductConfig'den nesne üretilemez. Sadece instance ile apiKey erişilir.
   print(ProductConfig.instance.apiKey);
   print(line);
+  ProductLazySingleton.instance;
 }
 
 class Product {
