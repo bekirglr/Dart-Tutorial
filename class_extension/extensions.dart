@@ -1,4 +1,5 @@
 void main() {
+  // ignore: unused_local_variable
   int userMoney = 100;
   final customerBuy = Product.oil;
 
