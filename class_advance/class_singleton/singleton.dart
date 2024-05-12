@@ -1,6 +1,7 @@
-import '../../class_enum/class_enums.dart';
+import 'product_config_model.dart';
 
 void main() {
+  var line = "*" * 10;
   final product1 = Product('Cedric');
   product1.stock;
 
@@ -19,6 +20,7 @@ void main() {
 
   Product.incrementMoney(50);
   print(Product.money);
+  print(line);
 
   //User class kullanarak order yap.
   final user1 = User('Rico', 'Macbook Pro');
@@ -26,9 +28,15 @@ void main() {
   print(newOrder.name);
 
   print(Product.jennie().name);
+  print(line);
 
   // ignore: unused_local_variable
   final newOrder2 = Product.fromUser(user1);
+
+  ProductConfig.instance.apiKey;
+  //ProductConfig'den nesne üretilemez. Sadece instance ile apiKey erişilir.
+  print(ProductConfig.instance.apiKey);
+  print(line);
 }
 
 class Product {
