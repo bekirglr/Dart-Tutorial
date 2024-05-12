@@ -1,5 +1,7 @@
+import '../../class_enum/class_enums.dart';
+
 void main() {
-  final product1 = Product();
+  final product1 = Product('Cedric');
   product1.stock;
 
   //static kullandığım için nesne oluşturmadan product'taki ki money ve price erişebilirim
@@ -17,17 +19,46 @@ void main() {
 
   Product.incrementMoney(50);
   print(Product.money);
+
+  //User class kullanarak order yap.
+  final user1 = User('Rico', 'Macbook Pro');
+  final newOrder = Product(user1.name);
+  print(newOrder.name);
+
+  print(Product.jennie().name);
+
+  // ignore: unused_local_variable
+  final newOrder2 = Product.fromUser(user1);
 }
 
 class Product {
   int stock = 5;
+  String name;
   static int price = 100;
   static int money = 20;
+
+  Product(this.name);
 
   static void incrementMoney(int newMoney) {
     money += newMoney;
   }
+
+  Product.jennie([this.name = 'Jennie']) {}
+
+  //Geriye değer döndüren constructor
+  factory Product.fromUser(User user) {
+    return Product(user.name);
+  }
 }
+
+class User {
+  final String name;
+  final String order;
+
+  User(this.name, this.order);
+}
+
+
 /*
 Static tanımlanmış sınıf veya instance diğer dosya ve klasörlere public hale geliyor.
 Bu her ne kadar kolay ve güzel görünsede tehlikeli bir kullanımdır.
