@@ -32,6 +32,11 @@ class CarBrand {
         carType.hashCode ^
         isSecondHand.hashCode;
   }
+
+  @override
+  String toString() {
+    return '$model - $price';
+  }
 }
 
 enum carBrands {

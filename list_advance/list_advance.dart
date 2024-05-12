@@ -53,4 +53,11 @@ void main() {
   } else {
     print("Elimizde yok!");
   }
+
+  //Markası Mercedes olan ve ücreti 300.000'den fazla olanların arbaların modelini yazdır.
+  final resultMerc300 = carItems.where((element) {
+    return element.model == 2021 && element.price < 300;
+  }).join();
+
+  print(resultMerc300);
 }
