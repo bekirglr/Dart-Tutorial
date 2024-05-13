@@ -67,6 +67,29 @@ Avantajları şunlardır:
 Özetlemek gerekirse, Singleton deseni, yalnızca bir örneğe sahip olmanın gerektiği durumlarda kullanılır ve bu örneğe uygulama boyunca tek bir noktadan erişim sağlar, böylece kodunuzun düzenli ve bellek kullanımının etkin olmasını sağlar.
 
 
+# SOLID Prensibi
+SOLID, yazılım tasarımı için beş temel prensibi ifade eden bir kısaltmadır. Her bir harf, bir prensibi temsil eder:
+
+1. **S - Tek Sorumluluk Prensibi (Single Responsibility Principle)**: Bir sınıfın yalnızca bir nedeni olmalıdır ve bir sınıfın değişmesi gereken yalnızca bir nedeni olmalıdır. Bu prensip, bir sınıfın sadece belirli bir görevi yerine getirmesi gerektiğini belirtir. Böylece, sınıfların daha kolay anlaşılabilir, bakımı daha kolay ve değişikliklere daha açık olması sağlanır.
+
+2. **O - Açık/Kapalı Prensibi (Open/Closed Principle)**: Yazılım varlıkları (sınıflar, modüller, fonksiyonlar vb.), genişletmeye açık ancak değişime kapalı olmalıdır. Yani mevcut kod değişmeden yeni davranışlar eklenmeli veya mevcut davranışlar değiştirilmelidir. Bu prensip, kodun esnekliğini ve uzun vadeli bakımını kolaylaştırır.
+
+3. **L - Liskov İlkesi (Liskov Substitution Principle)**: Alt sınıflar, üst sınıfların yerine kullanılabilir olmalıdır. Yani, bir üst sınıfa ait nesneler, alt sınıfların nesneleri tarafından sorunsuzca değiştirilebilir olmalıdır. Bu, türetilmiş sınıfların temel sınıfın davranışını değiştirmeden genişletilebilmesini sağlar.
+
+4. **I - Arayüz Ayrımı Prensibi (Interface Segregation Principle)**: İstemciler, ihtiyaç duymadıkları metodlara bağlı olmamalıdır. Yani, bir arayüz, ihtiyaç duyulan işlevsellikle sınırlı olmalıdır. Bu prensip, sınıfların gereksiz bağımlılıklardan kaçınmasını sağlar ve kodun daha modüler olmasını sağlar.
+
+5. **D - Bağımlılıkların Ters Çevrilmesi Prensibi (Dependency Inversion Principle)**: Yüksek seviyeli modüller, düşük seviyeli modüllere bağlı olmamalıdır. Bunun yerine, her ikisi de soyutlamalara bağlı olmalıdır. Bu prensip, soyutlamaların kullanılmasını ve sınıflar arası sıkı bağlantıların azaltılmasını sağlar, böylece kodun daha esnek ve bakımı daha kolay olmasını sağlar.
+
+SOLID prensiplerinin kolaylıkları şunlardır:
+
+- Kodun daha okunabilir ve anlaşılabilir olmasını sağlar.
+- Kodun daha esnek ve değişime açık olmasını sağlar.
+- Kodun daha az bağımlılığa sahip olmasını sağlar, böylece yeniden kullanılabilirlik ve test edilebilirlik artar.
+- Uzun vadeli bakım ve genişletme kolaylığı sağlar.
+
+Bu prensipler, yazılım geliştirme sürecinde daha kaliteli, sürdürülebilir ve ölçeklenebilir kod üretmeye yardımcı olur.
+
+
 # EK
 Bu repo'mda [Veli Bacik'in](https://github.com/VB10) verdiği dart eğitim videosunu tamamlayarak notlarımı paylaştım.
 
