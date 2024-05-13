@@ -1,3 +1,9 @@
+# İçindekiler
+1. [Dart'ta Veri Yapıları ve Dil Özellikleri](#dartta-veri-yapıları-ve-dil-özellikleri)
+4. [Singleton nedir? Ne için kullanılır?](#singleton-nedir-ne-için-kullanılır)
+5. [SOLID Prensibi](#solid-prensibi)
+6. [EK](#ek)
+
 # Dart'ta Veri Yapıları ve Dil Özellikleri
 
 1. **Map**: Map, anahtar-değer çiftlerini depolayan bir veri yapısıdır. Bu, bir anahtara bağlı olarak bir değer saklamak için kullanışlıdır. Anahtarlar ve değerler herhangi bir veri türü olabilir. Örneğin:
