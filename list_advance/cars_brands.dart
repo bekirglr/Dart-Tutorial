@@ -1,5 +1,5 @@
 class CarBrand {
-  final carBrands brand;
+  final CarBrands brand;
   final int model;
   final double price;
   final String? carType;
@@ -35,13 +35,14 @@ class CarBrand {
 
   @override
   String toString() {
-    return '$model - $price';
+    return '$brand - $price';
   }
 }
 
-enum carBrands {
+enum CarBrands {
   BMW,
   Mercedes,
   Audi,
   Volvo,
+  Tesla,
 }

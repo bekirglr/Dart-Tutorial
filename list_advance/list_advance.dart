@@ -10,34 +10,34 @@ void main() {
   */
 
   final carBrand = CarBrand(
-      brand: carBrands.Audi, model: 2020, price: 300.000, isSecondHand: false);
+      brand: CarBrands.Audi, model: 2020, price: 300.000, isSecondHand: false);
   print(carBrand);
 
   //4 tanem arabam var
   final carItems = [
     CarBrand(
-      brand: carBrands.BMW,
+      brand: CarBrands.BMW,
       model: 2024,
       price: 270.000,
     ),
     CarBrand(
-      brand: carBrands.Audi,
+      brand: CarBrands.Audi,
       model: 2013,
       price: 300.000,
     ),
     CarBrand(
-        brand: carBrands.Mercedes,
+        brand: CarBrands.Mercedes,
         model: 1980,
         price: 350.000,
         isSecondHand: false),
     CarBrand(
-      brand: carBrands.Volvo,
+      brand: CarBrands.Volvo,
       model: 2021,
       price: 250.000,
     ),
   ];
 
-  final newCar = CarBrand(brand: carBrands.Volvo, model: 2021, price: 250.000);
+  final newCar = CarBrand(brand: CarBrands.Volvo, model: 2021, price: 250.000);
   print(line);
 
   //Kaç tanesi ikinci el?
@@ -60,4 +60,43 @@ void main() {
   }).join();
 
   print(resultMerc300);
+  print(line);
+
+  //Sadece isimleri yan yana getir
+  final carNames = carItems.map((e) => e.brand).join(' - ');
+  print(carNames);
+  print(line);
+
+  //Elimde Audi var mı?
+  bool isHaveCarTesla = false;
+  try {
+    final teslaCar =
+        carItems.singleWhere((element) => element.brand == CarBrands.Tesla);
+    print(teslaCar.brand);
+    isHaveCarTesla = true;
+  } catch (e) {
+    print("Araba yok!");
+    isHaveCarTesla = false;
+  } finally {
+    print("Varlığı sorgulandı: $isHaveCarTesla");
+  }
+  //finally her durumda çalışır
+  print(line);
+
+  //Tesla araba yokmuş. O halde ekle
+  final _teslaCar = CarBrand(brand: CarBrands.Tesla, model: 2023, price: 10000);
+  carItems.add(_teslaCar);
+
+  //Fiyatları azdan çoğa ve çoktan aza sırala
+  carItems.sort((first, second) => first.price.compareTo(second.price));
+  print('a < b $carItems');
+  carItems.sort((first, second) => second.price.compareTo(first.price));
+  print('a > b $carItems');
+
+  //Markası BMW olan ve fiyatı 500 den büyük araçları listeden sil.
+  carItems.remove(_teslaCar);
+  print(carItems);
+  carItems.removeWhere(
+      (element) => element.brand == CarBrands.BMW || element.price < 300);
+  print(carItems);
 }
