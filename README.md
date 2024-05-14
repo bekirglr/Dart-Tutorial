@@ -1,7 +1,8 @@
 <details>
-    <summer>
+    <summary>
         for English 🇬🇧
-    </summer>
+    </summary>
+    coming soon 
 </details>
 
 # İçindekiler
