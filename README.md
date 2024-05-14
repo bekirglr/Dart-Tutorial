@@ -1,3 +1,9 @@
+<details>
+    <summer>
+        for English 🇬🇧
+    </summer>
+</details>
+
 # İçindekiler
 1. [Dart'ta Veri Yapıları ve Dil Özellikleri](#dartta-veri-yapıları-ve-dil-özellikleri)
 4. [Singleton nedir? Ne için kullanılır?](#singleton-nedir-ne-için-kullanılır)
