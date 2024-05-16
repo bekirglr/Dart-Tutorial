@@ -32,9 +32,7 @@ class UserLocalization {
 
 
 /*
-
 Alt sınıflar, üst sınıfların yerine kullanılabilir olmalıdır. 
 Yani, bir üst sınıfa ait nesneler, alt sınıfların nesneleri tarafından sorunsuzca değiştirilebilir olmalıdır. 
 Bu, türetilmiş sınıfların temel sınıfın davranışını değiştirmeden genişletilebilmesini sağlar.
-
 */
